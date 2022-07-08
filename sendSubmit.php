@@ -64,7 +64,7 @@ try {
  
     //Recipients
     $mail->setFrom('dhionathanappsend@outlook.com.br', 'Dhionathan');
-    $mail->addAddress('dhionathanappsend@outlook.com.br', 'Dhionathan');     //Add a recipient
+    $mail->addAddress($mensagem->__get('para'));     //Add a recipient
     //$mail->addReplyTo('info@example.com', 'Information');
     //$mail->addCC('cc@example.com');
     //$mail->addBCC('bcc@example.com');
@@ -75,12 +75,12 @@ try {
  
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'PHPMailler Test';
-    $mail->Body    = '<h3 style="color:red;"><strong>PHPMailler Request</strong></h3>';
-    $mail->AltBody = 'PHPMailler Request';
+    $mail->Subject = $mensagem->__get('assunto');
+    $mail->Body    = $mensagem->__get('mensagem');
+    $mail->AltBody = $mensagem->__get('mensagem');
  
     $mail->send();
-    echo 'Message has been sent';
+    echo 'Mensagem Enviada com sucesso';
 } catch (Exception $e) {
     echo "Não foi possível enviar este e-mail, por favor tente novamente ";
     echo "Detalhes do erro: {$mail->ErrorInfo}";

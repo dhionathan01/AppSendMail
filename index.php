@@ -24,7 +24,7 @@
 						<form action="sendSubmit.php" method="post">
 							<div class="form-group">
 								<label for="para">Para</label>
-								<input name="para" type="text" class="form-control" id="para" placeholder="dhionathan@dominio.com.br">
+								<input name="para" type="text" class="form-control" id="para" placeholder="email_exemplo@mail.com.br">
 							</div>
 
 							<div class="form-group">
@@ -34,7 +34,7 @@
 
 							<div class="form-group">
 								<label for="mensagem">Mensagem</label>
-								<textarea name="mensagem" class="form-control" id="mensagem"></textarea>
+								<textarea placeholder="Insira Mensagem aqui" name="mensagem" class="form-control" id="mensagem"></textarea>
 							</div>
 
 							<button type="submit" class="btn btn-primary btn-lg">Enviar Mensagem</button>
